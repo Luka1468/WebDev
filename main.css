@@ -1,0 +1,100 @@
+body{
+	background-color:grey ;
+}
+.container {
+	/*background-image: url("../pictures/blueback.jpg");*/
+	background-color: #565555;
+	margin:20px;
+	display: grid;
+	grid-template-columns: 10% 40% 40% 10%; 
+	grid-template-rows: 5% 5% 400px 500px ; 
+	grid-template-areas: 
+		"top top top top" 
+		"lside nav nav rside"
+		"lside main main rside" 
+		"lside main main rside"
+		"lside main main rside"; 
+}
+/*the navigation bar to see specific blogs*/
+.nav{
+	grid-area: nav;
+	background-color: #2A2A2A;
+	padding-top: 3px;
+	display: inline;
+	text-align: center;
+	border-radius: 25px;
+	padding: 8px;
+	margin: 4px
+
+
+}
+/*the logo and some attributes*/
+.top{
+	grid-area: top;
+	display: inline;
+	border:1px black;
+	background-color: #053970;
+	
+}
+/*where the blogs will live*/
+.main{
+	grid-area: main;
+	padding: 10%;
+	border:1px black;
+
+}
+
+}
+/*side space*/
+.leftside{
+	grid-area: lside;
+
+}
+/*side space*/
+.rightside{
+	grid-area: rside;
+
+}
+
+/*the box to add a new text area*/
+.divbox{
+  border-radius: 25px;
+  background: #CECECE;
+  width: 60%;
+  height: 40%; 
+  opacity: 0.75;
+  position: relative;
+  padding:10px;
+}
+/*the comment box*/
+.commentbox{
+  border-radius: 25px;
+  background: #828282;
+  width: 20%; 
+  opacity: 0.75;
+   position: relative;
+   padding:2px;
+ max-height: 40%; 
+}
+/*coloring and spacing for the text */
+.textpadding{
+	left:10%;
+	color: #CECECE;
+	display: inline;
+	padding-top: 10px;
+}
+.textpadding :link{
+	color:#2aaaf9;
+}
+.textpadding :hover {
+	left:10%;
+	color:#CECECE ;
+	background-color: #646464;
+}
+/*navigation buttons*/
+/*.navbox{
+	height: 8px;
+	background-color: #2A2A2A;
+	background-color: grey;
+
+}*/
