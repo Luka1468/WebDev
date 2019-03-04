@@ -70,6 +70,10 @@ body{
 .divbox :link{
 color: #2aaaf9;
 }
+.divbox :active{
+color: #2aaaf9;
+}
+
 /*the top features box*/
 .featuresbox{
   text-align: center;
