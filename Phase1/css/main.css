@@ -1,0 +1,166 @@
+body{
+	background-color:grey ;
+}
+.container {
+	/*background-image: url("../pictures/blueback.jpg");*/
+	background-color: #565555;
+	margin:20px;
+	display: grid;
+	grid-template-columns: 15% 35% 35% 15%; 
+	grid-template-rows: 5% 5% 70% 10% ; 
+	grid-template-areas: 
+		"top top top top" 
+		"lside nav nav rside"
+		"lside main main rside" 
+		"lside main main rside"
+		"lside main main rside"; 
+}
+/*the navigation bar to see specific blogs*/
+.nav{
+	grid-area: nav;
+	background-color: #2A2A2A;
+	padding-top: 3px;
+	display: inline;
+	text-align: center;
+	border-radius: 25px;
+	padding: 8px;
+	margin: 4px
+
+}
+/*the logo and some attributes*/
+.top{
+	grid-area: top;
+	display: inline;
+	border:1px black;
+	background-color: #053970;
+	
+}
+/*where the blogs will live*/
+.main{
+	grid-area: main;
+	padding: 10%;
+	border:1px black;
+
+}
+
+}
+/*side space*/
+.leftside{
+	grid-area: lside;
+
+}
+/*side space*/
+.rightside{
+	grid-area: rside;
+
+}
+
+/*the box to add a new text area*/
+.divbox{
+  border-radius: 25px;
+  background: #CECECE;
+  width: 60%;
+  height: 35%; 
+  opacity: 0.75;
+  position: relative;
+  padding:10px;
+  margin-bottom: 15px;
+  left: 20%
+}
+.divbox :link{
+color: #2aaaf9;
+}
+.divbox :active{
+color: #2aaaf9;
+}
+
+/*the top features box*/
+.featuresbox{
+  text-align: center;
+  border-radius: 25px;
+  background: #828282;
+  width: 15%; 
+  height: 80%;
+  opacity: 0.75;
+  position: absolute;
+  padding:5px;
+  left: 75%;
+  top:65%;
+  max-height: 90%;
+}
+
+/*coloring and spacing for the text */
+.textpadding{
+	left:10%;
+	color: #CECECE;
+	display: inline;
+	padding-top: 10px;
+
+}
+.textpadding :link{
+	color:#2aaaf9;
+}
+.textpadding :hover {
+	left:10%;
+	color:#CECECE ;
+	background-color: #646464;
+}
+/*the social media box*/
+.navbutton{
+	height: 30%;
+	width: 15%;
+	left: 75%;
+	top: 30%;
+	background-color: #CECECE;
+	color: white;
+	position:absolute;
+	border-radius: 25px;
+	text-align: center;
+}
+/*links to the featured blogs css*/
+
+.blogs{
+	height: 30%;
+	width: 15%;
+	background-color: black;
+	color: #2aaaf9;
+	position:relative;
+	border-radius: 25px;
+	text-align: center;
+	padding:10px;
+	padding-left: 10%;
+	padding-right: 10%;
+	margin: 10px;
+}
+.blogs :hover {
+	height: 30%;
+	width: 15%;
+	background-color: grey;
+	color: blue;
+	position:relative;
+	border-radius: 25px;
+	text-align: center;
+	padding:10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	margin: 10px;
+}
+.addblog{
+  border-radius: 25px;
+  background: #CECECE;
+  width: 60%;
+  height: 10%; 
+  opacity: 0.75;
+  position: relative;
+  padding:10px;
+  margin-bottom: 15px;
+  left: 20%;
+  text-align: center;
+}
+/*on hover, this will make the picture change*/
+.hover :hover{
+	 box-shadow: -1px 3px 5px 8px rgba(2,169,175,1);
+}
+
+
+
