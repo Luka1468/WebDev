@@ -45,8 +45,8 @@ session_start();
 
             <div>
                 <form>
-                    Username: <input type = "text" name = "usrname">
-                    Password: <input type ="password" name ="pswd">
+                    Username: <input type = "text" name = "user">
+                    Password: <input type ="password" name ="pass">
                     <input type ="submit" name ="submit" value = "Login">
                     <input type="button" name ="signup" value = "Sign Up">
                     <a href ="forgetpswd.php">forgot password</a>
