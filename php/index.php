@@ -28,7 +28,7 @@ session_start();
                     <h3 class="textpadding">
                         <!-- links for main articles -->
 
-                        | <a href="xyz">Home</a> 
+                        | <a href="../index.html">Home</a> 
 
                         | <a href="xyz">About Me</a> 
 
