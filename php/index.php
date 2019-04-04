@@ -42,15 +42,16 @@ session_start();
                 </div>
 
             </div>
+        </div>
 
-            <div>
-                <form action = "index.php" method="POST">
-                    Username: <input type = "text" name = "user">
-                    Password: <input type ="password" name ="pass">
-                    <input type ="submit" name ="submit" value = "Login">
-                    <input type="button" name ="signup" value = "Sign Up">
-                    <a href ="forgetpswd.php">forgot password</a>
-                </form>
-            </div>
+        <div>
+            <form action = "index.php" method="POST">
+                Username: <input type = "text" name = "user">
+                Password: <input type ="password" name ="pass"><br>
+                <input type ="submit" name ="submit" value = "Login">
+                <input type="button" name ="signup" value = "Sign Up"><br>
+                <a href ="forgetpswd.php">forgot password</a>
+            </form>
+        </div>
     </body>
 </html>
