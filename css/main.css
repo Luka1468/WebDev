@@ -1,10 +1,16 @@
 body{
-	background-color:grey ;
+	background-color:#f7f7f7 ;
+	font-family:Times New Roman,Tahoma,Verdana,Arial;
+	font-size: 13px;
+	min-width:1300px;
+
+
 }
 .container {
-	/*background-image: url("../pictures/blueback.jpg");*/
-	background-color: #565555;
-	margin:20px;
+
+	margin:0 auto;
+	width: 70%;
+	/*
 	display: grid;
 	grid-template-columns: 15% 35% 35% 15%; 
 	grid-template-rows: 5% 5% 70% 10% ; 
@@ -13,9 +19,117 @@ body{
 		"lside nav nav rside"
 		"lside main main rside" 
 		"lside main main rside"
-		"lside main main rside"; 
+		"lside main main rside";
+	*/
+
 }
-/*the navigation bar to see specific blogs*/
+
+.header {
+
+	width: 98%;
+	margin: 10px;
+	height:120px;
+	background-color: #3b5998;
+
+}
+
+.logo {
+	position: relative;
+	display: inline;
+	padding: 15px;
+
+}
+
+.nav {
+	display: inline;
+	position: relative;
+	left: 150px;
+	width: 100%;
+	bottom: 65px;
+
+}
+.content {
+	width:75%;
+	height:80%;
+	position: relative;
+	display: block;
+	margin: 10px;
+	margin-bottom:15px;
+	background-color:#ffffff;
+	float: left;
+
+}
+
+.sidebar {
+	width:20%;
+	position: relative;
+
+	background-color:#ffffff;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	float: right;
+	display: inline;
+
+}
+.login {
+	position: relative;
+	float: right;
+
+}
+.social {
+
+	background-color: #f7f7f7;
+	position: relative;
+	display: block;
+	padding: 20px;
+	margin: 20px;
+	text-align: center;
+
+}
+
+#vlad{
+	position: relative;
+	display: block;
+	margin: auto;
+
+}
+
+.features {
+
+	background-color: #f7f7f7;
+	position: relative;
+
+	padding: 20px;
+	margin: 20px;
+	text-align: center;
+
+
+}
+
+/*where the blogs will live*/
+.main{
+
+	position: relative;
+	display: block;
+	padding: 20px;
+	border:1px black;
+	margin-left: 20px;
+
+}
+
+.clear {
+	clear:both;
+}
+.footer {
+	height:70px;
+	margin-top:10px;
+	width: 98%;
+
+	background-color:#3b5998;
+}
+
+/*the navigation bar to see specific blogs
 .nav{
 	grid-area: nav;
 	background-color: #2A2A2A;
@@ -27,39 +141,23 @@ body{
 	margin: 4px
 
 }
+
 /*the logo and some attributes*/
 .top{
 	grid-area: top;
 	display: inline;
 	border:1px black;
-	background-color: #053970;
-	
-}
-/*where the blogs will live*/
-.main{
-	grid-area: main;
-	padding: 10%;
-	border:1px black;
+	background-color: #f7f7f7;
 
 }
 
-/*side space*/
-.leftside{
-	grid-area: lside;
-
-}
-/*side space*/
-.rightside{
-	grid-area: rside;
-
-}
 
 /*the box to add a new text area*/
 .divbox{
   border-radius: 25px;
-  background: #CECECE;
+  background: #f7f7f7;
   width: 60%;
-  height: 35%; 
+  height: 35%;
   opacity: 0.75;
   position: relative;
   padding:10px;
@@ -67,26 +165,12 @@ body{
   left: 20%
 }
 .divbox :link{
-color: #2aaaf9;
+color: #f7f7f7;
 }
 .divbox :active{
-color: #2aaaf9;
+color: #f7f7f7;
 }
 
-/*the top features box*/
-.featuresbox{
-  text-align: center;
-  border-radius: 25px;
-  background: #828282;
-  width: 15%; 
-  height: 80%;
-  opacity: 0.75;
-  position: absolute;
-  padding:5px;
-  left: 75%;
-  top:65%;
-  max-height: 90%;
-}
 
 /*coloring and spacing for the text */
 .textpadding{
@@ -104,18 +188,7 @@ color: #2aaaf9;
 	color:#CECECE ;
 	background-color: #646464;
 }
-/*the social media box*/
-.navbutton{
-	height: 30%;
-	width: 15%;
-	left: 75%;
-	top: 30%;
-	background-color: #CECECE;
-	color: white;
-	position:absolute;
-	border-radius: 25px;
-	text-align: center;
-}
+
 /*links to the featured blogs css*/
 
 .blogs{
@@ -148,7 +221,7 @@ color: #2aaaf9;
   border-radius: 25px;
   background: #CECECE;
   width: 60%;
-  height: 10%; 
+  height: 10%;
   opacity: 0.75;
   position: relative;
   padding:10px;
@@ -162,4 +235,46 @@ color: #2aaaf9;
 }
 
 
+ul {
+	font-family: Times New Roman, Verdana;
 
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	display: block;
+	position: relative;
+	float: left;
+}
+li ul { display: none; }
+ul li a {
+	display: block;
+	text-decoration: none;
+	color: #ffffff;
+
+	padding: 5px 15px 5px 15px;
+	background: #3b5998;;
+	margin-left: 1px;
+	white-space: nowrap;
+}
+ul li a:hover { background: #3b5998; }
+li:hover ul {
+	display: block;
+	position: absolute;
+}
+li:hover li {
+	float: none;
+	font-size: 16px;
+	z-index: 1;
+}
+li:hover a { background: #3b5998; }
+li:hover li a:hover { background: #8b9dc3; }
+
+.icons{
+	position: relative;
+	margin-left: -10px;
+	align-text: center;
+}
