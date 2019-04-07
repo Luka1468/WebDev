@@ -1,0 +1,298 @@
+body{
+    background-color:#f7f7f7 ;
+    font-family:Times New Roman,Tahoma,Verdana,Arial;
+    font-size: 13px;
+    min-width:1300px;
+
+
+}
+.container {
+
+    margin:0 auto;
+    width: 70%;
+    /*
+    display: grid;
+    grid-template-columns: 15% 35% 35% 15%;
+    grid-template-rows: 5% 5% 70% 10% ;
+    grid-template-areas:
+        "top top top top"
+        "lside nav nav rside"
+        "lside main main rside"
+        "lside main main rside"
+        "lside main main rside";
+    */
+
+}
+
+.header {
+
+    width: 98%;
+    margin: 10px;
+    height:120px;
+    background-color: #3b5998;
+
+}
+
+.logo {
+    position: relative;
+    display: inline;
+    padding: 15px;
+
+}
+
+.nav {
+    display: inline;
+    position: relative;
+    left: 150px;
+    width: 100%;
+    bottom: 65px;
+
+}
+.content {
+    width:75%;
+    height:80%;
+    position: relative;
+    display: block;
+    margin: 10px;
+    margin-bottom:15px;
+    background-color:#ffffff;
+    float: left;
+
+}
+
+.sidebar {
+    width:20%;
+    position: relative;
+
+    background-color:#ffffff;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: right;
+    display: inline;
+
+}
+.login {
+    position: relative;
+    float: right;
+
+}
+.social {
+
+    background-color: #f7f7f7;
+    position: relative;
+    display: block;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+
+}
+
+#vlad{
+    position: relative;
+    display: block;
+    margin: auto;
+
+}
+
+.features {
+
+    background-color: #f7f7f7;
+    position: relative;
+
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+
+
+}
+
+/*where the blogs will live*/
+.main{
+
+    position: relative;
+    display: block;
+    padding: 20px;
+    border:1px black;
+    margin-left: 20px;
+
+}
+
+.clear {
+    clear:both;
+}
+.footer {
+    height:70px;
+    margin-top:10px;
+    width: 98%;
+
+    background-color:#3b5998;
+}
+
+/*the navigation bar to see specific blogs
+.nav{
+	grid-area: nav;
+	background-color: #2A2A2A;
+	padding-top: 3px;
+	display: inline;
+	text-align: center;
+	border-radius: 25px;
+	padding: 8px;
+	margin: 4px
+}
+/*the logo and some attributes*/
+.top{
+    grid-area: top;
+    display: inline;
+    border:1px black;
+    background-color: #f7f7f7;
+
+}
+
+
+/*the box to add a new text area*/
+.divbox{
+    border-radius: 25px;
+    background: #f7f7f7;
+    width: 60%;
+    height: 35%;
+    opacity: 0.75;
+    position: relative;
+    padding:10px;
+    margin-bottom: 15px;
+    left: 20%
+}
+.divbox :link{
+    color: #f7f7f7;
+}
+.divbox :active{
+    color: #f7f7f7;
+}
+
+
+/*coloring and spacing for the text */
+.textpadding{
+    left:10%;
+    color: #CECECE;
+    display: inline;
+    padding-top: 10px;
+
+}
+.textpadding :link{
+    color:#2aaaf9;
+}
+.textpadding :hover {
+    left:10%;
+    color:#CECECE ;
+    background-color: #646464;
+}
+
+/*links to the featured blogs css*/
+
+.blogs{
+    height: 30%;
+    width: 15%;
+    background-color: black;
+    color: #2aaaf9;
+    position:relative;
+    border-radius: 25px;
+    text-align: center;
+    padding:10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 10px;
+}
+.blogs :hover {
+    height: 30%;
+    width: 15%;
+    background-color: grey;
+    color: blue;
+    position:relative;
+    border-radius: 25px;
+    text-align: center;
+    padding:10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 10px;
+}
+.addblog{
+    border-radius: 25px;
+    background: #CECECE;
+    width: 60%;
+    height: 10%;
+    opacity: 0.75;
+    position: relative;
+    padding:10px;
+    margin-bottom: 15px;
+    left: 20%;
+    text-align: center;
+}
+/*on hover, this will make the picture change*/
+.hover :hover{
+    box-shadow: -1px 3px 5px 8px rgba(2,169,175,1);
+}
+
+
+ul {
+    font-family: Times New Roman, Verdana;
+
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul li {
+    display: block;
+    position: relative;
+    float: left;
+}
+li ul { display: none; }
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+
+    padding: 5px 15px 5px 15px;
+    background: #3b5998;;
+    margin-left: 1px;
+    white-space: nowrap;
+}
+ul li a:hover { background: #3b5998; }
+li:hover ul {
+    display: block;
+    position: absolute;
+}
+li:hover li {
+    float: none;
+    font-size: 16px;
+    z-index: 1;
+}
+li:hover a { background: #3b5998; }
+li:hover li a:hover { background: #8b9dc3; }
+
+.icons{
+    position: relative;
+    margin-left: -10px;
+    align-text: center;
+}
+
+
+.borders{
+
+    padding: 5px;
+}
+.side{
+    display: inline-block;
+    position: absolute;
+}
+.looks{
+    padding: 10px;
+    margin:10px;
+}
+.contactMe{
+    margin: 10px;
+    padding: 5px;
+    background-color: #565555;
+
+}
