@@ -9,7 +9,7 @@ body{
 .container {
 
 	margin:0 auto;
-	width: 70%;
+	width: 90%;
 	/*
 	display: grid;
 	grid-template-columns: 15% 35% 35% 15%; 
@@ -72,11 +72,7 @@ body{
 	display: inline;
 
 }
-.login {
-	position: relative;
-	float: right;
 
-}
 .social {
 
 	background-color: #f7f7f7;
@@ -104,6 +100,15 @@ body{
 	margin: 20px;
 	text-align: center;
 
+}
+
+.login {
+
+	background-color: #f7f7f7;
+	position: relative;
+	padding: 20px;
+	margin: 20px;
+	text-align: center;
 
 }
 

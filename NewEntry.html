@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src="js/form.js"></script>
+
+<body>
+
+<div class="container">
+    <!-- the top of the website where the logo or title/ some navigations can be like top trending, latest news... -->
+    <!-- fixed position top left -->
+    <div class="header">
+
+        <!-- logo of the blog -->
+        <a href="index.php"><img class="logo" src="https://seeklogo.com/images/R/Russia-logo-BC336FF7A3-seeklogo.com.png"
+                                 width="80" height="80"></a>
+
+
+        <div class="nav">
+            <ul id="menu">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="">Top 10 Conquests</a>
+                    <ul>
+                        <li><a href="">Ukraine</a></li>
+                        <li><a href="">Yugoslavia</a></li>
+                        <li><a href="">USA</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Future Conquests</a>
+                    <ul>
+                        <li><a href="">Romania</a></li>
+                        <li><a href="">France</a></li>
+                        <li><a href="">Germany</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="AboutMe.php">Contact</a></li>
+                <li><a href="AboutMe.php">About Me</a>
+
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+
+
+    <div class="content">
+
+
+        <div class="main">
+
+
+            <div class="entry" id="newEntry">
+                <form action="php/NewEntry.php" method="POST">
+
+                    <label><b>Title</b></label>
+                    <input type="text" placeholder="" name="title">
+                    <br>
+                    <label><b>Date</b></label>
+                    <input type="date" placeholder="" name="date">
+                    <br>
+                    <label><b>Author</b></label>
+                    <input type="text" placeholder="" name="author">
+                    <br>
+                    <label><b>Image</b></label>
+                    <input type="file" name="image" accept="image/*">
+                    <br>
+                    <label><b>Summary</b></label>
+                    <input type="text" placeholder="" name="summary">
+                    <br>
+                    <label><b>Body</b></label>
+                    <input type="text" style="width:200px; height:200px;" placeholder="" name="body">
+                    <br>
+
+                    <button type="submit" class="btn">Submit</button>
+
+                </form>
+            </div>
+
+        </div>
+
+        </div>
+
+
+
+
+
+
+    <div class="sidebar">
+
+        <!-- the social media section -->
+        <div class="social">
+            <img id="vlad" src="pictures/vlad.JPG" width="100" height="100">
+
+            <br>
+            <div class="icons">
+                <a href="http/www.twitter.com"><img src="pictures/twitter.png" height="20px;" width="20px;"></a>
+                <a href="http/www.facebook.com"><img src="pictures/facebook.jpg" height="21px;" width="40px;"></a>
+                <a href="http/www.instagram.com"><img src="pictures/insta.png" height="20px;" width="20px;"></a>
+                <a href="http/www.twitter.com"><img src="pictures/youtube.png" height="20px;" width="20px;"></a>
+            </div>
+        </div>
+
+
+
+
+        <!--end of the social media box  -->
+
+
+        <!-- start of the Featured section -->
+        <div class="features">
+            <h1>Recent Posts</h1>
+
+
+        </div>
+
+    <div class="clear"></div>
+    <div class="footer"></div>
+</div>
+</div>
+</body>
+
+</html>

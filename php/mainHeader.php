@@ -15,7 +15,7 @@
     <div class="header">
 
         <!-- logo of the blog -->
-        <a href="../index.php"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png"
+        <a href="../index.php"><img class="logo" src="https://seeklogo.com/images/R/Russia-logo-BC336FF7A3-seeklogo.com.png"
                                     width="80" height="80"></a>
 
 
@@ -37,8 +37,8 @@
 
                     </ul>
                 </li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">About Me</a>
+                <li><a href="../AboutMe.php">Contact</a></li>
+                <li><a href="../AboutMe.php">About Me</a>
 
                 </li>
             </ul>
