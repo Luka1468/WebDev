@@ -1,11 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Gunar
- * Date: 4/4/2019
- * Time: 4:20 PM
- */
+//this page sends the values into a table that would send the information to the server, this page is sent from about me page(contact info)
 session_start();
+//getting information typed
 $name=$_POST['name'];
 $email=$_POST['email'];
 $message=$_POST['message'];
@@ -15,7 +11,7 @@ try {
         $user, $passwd);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected successfully";
-
+    //adding information into the server
     $command= "INSERT INTO phase1 (name, email, message) VALUES ('$name', '$email', '$messgae')";
 
     $dbh->exec($command);
