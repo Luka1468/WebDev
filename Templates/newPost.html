@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Create a new post</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Create a new post!</h1>
+        <div>
+            <form action ="blogTemplate.html" method="POST">
+                Title: <input type="text" name="title"><br>
+                Subtile: <input type="text" name="subtitle"><br>
+                Date: <input type="date" name="date"><br>
+                <input type="file" accept="image/*" onchange="loadFile(event)">
+                <img id="output"/><br>
+                <script>
+                    var loadFile = function (event) {
+                        var output = document.getElementById('output');
+                        output.src = URL.createObjectURL(event.target.files[0]);
+                    };
+                </script>
+                <textarea rows="10" cols="50" name="content">Enter blog post here:</textarea><br>
+                <input type="submit" value="Publish">
+            </form>
+        </div>
+    </body>
+</html>
