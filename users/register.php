@@ -1,5 +1,5 @@
 <?php
-//this page allows the user to login and sends the information to the server
+//this page sends the information to the server
 
 
 require '../php/connect.php';
