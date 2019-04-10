@@ -1,3 +1,6 @@
+<!-- This is the main page that will be the outline to all of the next pages, this look and navigation bar will be implemented in every
+page. This page contains links to all pages
+-->
 <?php
 session_start();
 
