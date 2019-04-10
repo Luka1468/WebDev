@@ -1,3 +1,10 @@
+<!--
+This page is the about me page, it tells you about the writer of the blog and makes sure that the users know what and why the creator 
+wanted this site to exist.
+This page is sending the information to the server and making sure that the items are sent
+
+-->
+
 <?php
 session_start();
 ?>
@@ -129,7 +136,9 @@ include 'php/connect.php';
         <!-- start of the Featured section -->
         <div class="features">
             <h1>Recent Posts</h1>
+            
             <?
+            // is the features section, gets the posts and displays them on the side, so it is easy to click on them
             try {
                 $myPDO = new PDO('mysql:host=localhost;dbname=sunjingw_week11', $user, $passwd);
                 $myPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
