@@ -1,3 +1,9 @@
+
+<!--
+The About me Page is a page that will display what the website is really about and who and why the creator's created the website.
+ This page also includes a way to connect to the main developer, and ask questions and to send improvments/bugs
+-->
+
 <?php
 session_start();
 ?>
@@ -87,6 +93,7 @@ include 'php/connect.php';
 </span>
 
                     <div>
+                        <!--form that will send the informaton to the php, which sends it to the sql server -->
                         <form action="php/contactConfirm.php" method="post">
                             <h2>Contact Me</h2>
                             <p>
