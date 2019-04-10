@@ -1,4 +1,5 @@
 <?php
+//tis page is to get a post that you clicked depending on which post you clicked
 session_start();
 
 ?>
