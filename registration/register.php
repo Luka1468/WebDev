@@ -1,5 +1,5 @@
 <!--
-This page will take the users information and send it to the server
+This page will take the users information and send it to the php file to send it to the server
 
 -->
 
