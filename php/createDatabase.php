@@ -8,7 +8,7 @@
 
 require 'connect.php';
 
-
+//creating the database and editing the table
 try {
 
     $myPDO = new PDO('mysql:host=localhost;dbname=sunjingw_week11', $user, $passwd);
