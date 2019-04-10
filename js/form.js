@@ -1,9 +1,9 @@
 
 //function opens form if display is none
+//if the logic button is clicked it dissapears
 function openLoginForm() {
     var form = document.getElementById("myForm");
     var buttons = document.getElementById("buttons");
-
 
     if (form.style.display == "block") {
         form.style.display = "none";
@@ -19,8 +19,9 @@ function openLoginForm() {
         buttons.style.display = "block";
     }
 }
-
+//if the registrer button is clicked it dissapears
 function openRegisterForm() {
+    //
     var form = document.getElementById("registerForm");
     var buttons = document.getElementById("buttons");
 
