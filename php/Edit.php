@@ -1,4 +1,5 @@
 <?php
+//this page is made to edit the intended file selected
 session_start();
 if (isset($_SESSION['user'])) {
 
@@ -11,7 +12,7 @@ if (isset($_SESSION['user'])) {
 
 
             <?php
-
+        //getting all of the users inputted information, so it can be found and changed 
             $id = $_GET['id'];
             $_SESSION['author'] = $_POST['author'];
             $_SESSION['title'] = $_POST['title'];
@@ -23,13 +24,13 @@ if (isset($_SESSION['user'])) {
 
             $myPDO = new PDO('mysql:host=localhost;dbname=sunjingw_week11', $user, $passwd);
             $myPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+            //geting the information and setting the information where the id matches the post you clicked on
             $stmt = $myPDO->prepare("SELECT author, title, summary, image, body, created FROM entries WHERE id='$id'");
             $stmt->execute();
 
 
             if ($stmt) {
-
+            //users input to change the post contents
             while ($row = $stmt->fetch()) {
                 ?>
 
