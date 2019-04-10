@@ -1,3 +1,4 @@
+<!-- the sidebar to the main program, this is where the login information is passed to the login.php, this page is added included inside of the main page -->
 <div class="sidebar">
 
     <!-- the social media section -->
@@ -18,11 +19,14 @@
     <!-- start of the Featured section -->
     <div class="features">
         <h1>Recent Posts</h1>
+        
         <?
+       
         try {
             $myPDO = new PDO('mysql:host=localhost;dbname=sunjingw_week11', $user, $passwd);
             $myPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+            
+            //selected by description
             $stmt = $myPDO->prepare("SELECT * FROM entries ORDER BY created DESC LIMIT 4");
             $stmt->execute();
 
@@ -30,7 +34,7 @@
 
                 while ($posts = $stmt->fetch()) {
                     ?>
-
+                    //display the post's
                     <div id="post1" style="text-align: center; font-size: 20px; margin: 5px;"><a href="Entry.php?id=<?
                         echo $posts[id]; ?>"><?php echo $posts['title']; ?></a></div>
 
@@ -82,6 +86,7 @@
         </div>
 
         <?php
+        //if user is not looged in stay on the page and display register and login
         if (!isset($_SESSION['user'])) {
             ?>
             <div id="buttons" style="display:block">
@@ -94,6 +99,7 @@
         ?>
 
         <?php
+        //
         if (isset($_SESSION['user'])) {
             echo "Logged in " . $_SESSION['user'] . "<br>";
             echo "<br><a href='../NewEntry.html'><button>New Post</button></a><br>";
