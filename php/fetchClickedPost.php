@@ -1,4 +1,5 @@
 <?php
+// this page is for getting the post that was clicked
 session_start();
 
 
@@ -10,12 +11,12 @@ $max = $_SESSION['max'];
 try {
     $myPDO = new PDO('mysql:host=localhost;dbname=sunjingw_week11', $user, $passwd);
     $myPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+    //gets the post based on the description
     $stmt = $myPDO->prepare("SELECT * FROM entries WHERE id='$id' ORDER BY created DESC");
     $stmt->execute();
 
     if ($stmt) {
-
+        //dispalysthe information based on the post clicked
         while ($posts = $stmt->fetch()) {
             ?>
             <div class="content">
@@ -34,6 +35,7 @@ try {
                     <p></p>
 
                     <?php
+                    // if the user is logged in allow them to edit or delete the post
                     if (isset($_SESSION['user'])) {
                         ?>
                         <a href="Edit.php?id=<?
@@ -52,6 +54,7 @@ try {
                     }
                     ?>
                     <br>
+                    <!-- this page 
                     <div id="prevnext"><a href="Entry.php?id=<? echo $posts[id] - 1; ?>">Previous Page</a>
                         <a href="Entry.php?id=<?
                         echo $posts[id] + 1; ?>">Next Page</a></div>
