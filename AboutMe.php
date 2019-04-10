@@ -1,3 +1,7 @@
+<!--
+The About me Page is a page that will display what the website is really about and who and why the creator's created the website.
+ This page also includes a way to connect to the main developer, and ask questions and to send improvments/bugs
+-->
 <?php
 session_start();
 ?>
@@ -130,11 +134,13 @@ include 'php/connect.php';
         <div class="features">
             <h1>Recent Posts</h1>
             <?
+            // connecting to the server
             try {
                 $myPDO = new PDO('mysql:host=localhost;dbname=sunjingw_week11', $user, $passwd);
                 $myPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $stmt = $myPDO->prepare("SELECT * FROM entries");
                 $stmt->execute();
+                // Fetching the posts for the sidebar
                 if ($stmt) {
                     while ($posts = $stmt->fetch()) {
                         ?>
