@@ -31,7 +31,7 @@
                 while ($posts = $stmt->fetch()) {
                     ?>
 
-                    <div id="post1" style="text-align: center; font-size: 20px; margin: 5px;"><a href="php/post.php?id=<?
+                    <div id="post1" style="text-align: center; font-size: 20px; margin: 5px;"><a href="Entry.php?id=<?
                         echo $posts[id]; ?>"><?php echo $posts['title']; ?></a></div>
 
 
@@ -95,13 +95,13 @@
 
         <?php
         if (isset($_SESSION['user'])) {
-        echo "Logged in ".$_SESSION['user']."<br>";
-        echo "<br><a href='../NewEntry.html'><button>New Post</button></a><br>";
+            echo "Logged in " . $_SESSION['user'] . "<br>";
+            echo "<br><a href='../NewEntry.html'><button>New Post</button></a><br>";
 
-        echo "<br><a href='logout.php'><button name=\"logout\">Logout</button></a>";
+            echo "<br><a href='logout.php'><button name=\"logout\">Logout</button></a>";
 
-            }
-?>
+        }
+        ?>
         <script type="text/javascript" src="../js/form.js"></script>
 
 

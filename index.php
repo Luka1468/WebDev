@@ -71,6 +71,7 @@ include 'php/connect.php';
                 $stmt = $myPDO->prepare("SELECT * FROM entries ORDER BY created DESC LIMIT 2");
                 $stmt->execute();
 
+
                 if ($stmt) {
 
                     while ($posts = $stmt->fetch()) {
@@ -114,11 +115,65 @@ include 'php/connect.php';
                 echo "Error: " . $e->getMessage();
             }
 
-            $myPDO = null;
+            ?>
 
+
+            <?php
+
+            $limit = 2;
+            $query = "SELECT * FROM entries";
+
+            $s = $myPDO->prepare($query);
+            $s->execute();
+            $total_results = $s->rowCount();
+            $total_pages = ceil($total_results / $limit);
+
+            if (!isset($_GET['page'])) {
+                $page = 1;
+            } else {
+                $page = $_GET['page'];
+            }
+
+
+            $starting_limit = ($page - 1) * $limit;
+            $show = "SELECT * FROM entries ORDER BY created DESC LIMIT $starting_limit, $limit";
+
+            $r = $myPDO->prepare($show);
+            $r->execute();
+
+            while ($res = $r->fetch(PDO::FETCH_ASSOC)):
+                ?>
+                <h4><?php echo $res['id']; ?></h4>
+                <p><?php echo $res['nama_kat']; ?></p>
+                <hr>
+            <?php
+            endwhile;
+
+
+            for ($page = 1; $page <= $total_pages; $page++):?>
+
+                <a href='<?php echo "?page=$page"; ?>' class="links"><?php echo $page; ?>
+                </a>
+
+            <?php endfor; ?>
+
+
+            <?php
+
+            //echo "<a href='index.php?page=".($page-1)."' class='button'>Previous</a></li>";
+
+            for ($i = 1; $i <= $total_pages; $i++) {
+                echo "<li><a href='index.php?page=" . $i . "'>" . $i . "</a></li>";
+            };
+
+            echo "<li><a href='index.php?page=" . ($page + 1) . "' class='button'>NEXT</a></li>";
+            echo "</ul>";
+
+
+            //<a href="index.php" onclick="<?php ">Next Page</a>
 
             ?>
-            <a href="index.php" onclick="<?php ?>">Next Page</a>
+
 
         </div>
     </div>
@@ -227,7 +282,7 @@ include 'php/connect.php';
 
             <?php
             if (isset($_SESSION['user'])) {
-                echo "Logged in as ".$_SESSION['user']."<br>";
+                echo "Logged in as " . $_SESSION['user'] . "<br>";
                 echo "</><br><a href='NewEntry.html'><button>New Post</button></a><br>";
                 echo "<br><a href='php/logout.php'><button name='logout'>Logout</button></a>";
             }
@@ -249,9 +304,9 @@ include 'php/connect.php';
 <?php
 
 
-    $now = time(); // Checking the time now when home page starts.
+$now = time(); // Checking the time now when home page starts.
 
-    if ($now > $_SESSION['expire']) {
-        session_destroy();
-    }
-    ?>
+if ($now > $_SESSION['expire']) {
+    session_destroy();
+}
+?>

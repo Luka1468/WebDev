@@ -1,19 +1,19 @@
 <?php
 session_start();
 
-    ?>
+?>
 
-    <?php
-    require 'connect.php';
-    ?>
+<?php
+require 'connect.php';
+?>
 
-    <?php require 'mainHeader.php'; ?>
+<?php require 'mainHeader.php'; ?>
 
-    <?
+<?
 
-     require 'fetchClickedPost.php';
+require 'fetchClickedPost.php';
 
-    require 'sidebar.php'; ?>
+require 'sidebar.php'; ?>
 
 
     <div class="clear"></div>
@@ -22,4 +22,4 @@ session_start();
     </body>
     </html>
 
-    <?php
+<?php
