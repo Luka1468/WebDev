@@ -1,4 +1,4 @@
-
+<!-- the design of the navigation bar-->
 <!DOCTYPE html>
 <html>
 <head>
