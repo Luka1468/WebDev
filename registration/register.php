@@ -1,3 +1,8 @@
+<!--
+This page will take the users information and send it to the server
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
