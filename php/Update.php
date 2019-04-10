@@ -1,4 +1,5 @@
 <?php
+// this page gets the updated information you added into the other page, and sends it to the server
 session_start();
 if (isset($_SESSION['user'])) {
 
